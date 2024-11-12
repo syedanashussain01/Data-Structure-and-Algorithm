@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+public class MergeArrayLists {
+    public static void main(String[] args) {
+        ArrayList<String> list1 = new ArrayList<>();
+        list1.add("Anas");
+        list1.add("Abdul Wasay");
+        list1.add("Ibad");
+        ArrayList<String> list2 = new ArrayList<>();
+        list2.add("Muneeb");
+        list2.add("Jawad");
+        list2.add("Aqeel");
+        ArrayList<String> mergedList = new ArrayList<>(list1);  
+        mergedList.addAll(list2);  
+        System.out.println("Merged ArrayList: " + mergedList);
+    }
+}

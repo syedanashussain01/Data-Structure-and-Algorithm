@@ -1,0 +1,30 @@
+public class Autoboxing {
+    public static void main(String[] args) {
+        int primitiveInt = 5;
+        Integer wrapperInt = primitiveInt; 
+        int unboxedInt = wrapperInt;
+        System.out.println("Autoboxing Example: ");
+        System.out.println("Primitive int: " + primitiveInt);
+        System.out.println("Wrapper Integer: " + wrapperInt);
+        System.out.println("Unboxed int: " + unboxedInt);
+        // Using Wrapper Class Methods
+        System.out.println("\nWrapper Class Methods: ");
+        String str = "100";
+        Integer intFromString = Integer.parseInt(str);
+        System.out.println("String to Integer using parseInt(): " + intFromString);
+        int num = 20;
+        System.out.println("Binary representation of 20: " + Integer.toBinaryString(num));
+        System.out.println("Octal representation of 20: " + Integer.toOctalString(num));
+        System.out.println("Hexadecimal representation of 20: " + Integer.toHexString(num));
+        Integer valueOfInt = Integer.valueOf(str);
+        System.out.println("String to Integer object using valueOf(): " + valueOfInt);
+        System.out.println("Maximum value of Integer: " + Integer.MAX_VALUE);
+        System.out.println("Minimum value of Integer: " + Integer.MIN_VALUE);
+        char ch = '5';
+        System.out.println("Is '5' a digit? " + Character.isDigit(ch));
+        char ch2 = 'A';
+        System.out.println("Is 'A' a letter? " + Character.isLetter(ch2));
+        double d = 45.67;
+        System.out.println("Is 45.67 a finite number? " + Double.isFinite(d));
+    }
+}

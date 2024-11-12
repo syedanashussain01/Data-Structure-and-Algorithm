@@ -1,0 +1,16 @@
+import java.util.*;
+public class Array {
+    public static void main(String[] args) {
+        int size[]={0,1,2,3};
+        int size1[]={4,5,6,7};
+        System.out.println("Before Swapping");
+        System.out.println(Arrays.toString(size));
+        System.out.println(Arrays.toString(size1));
+        int temp[]=size;
+        size=size1;
+        size1=temp;
+        System.out.println("After Swapping");
+        System.out.println(Arrays.toString(size));
+        System.out.println(Arrays.toString(size1));
+    }
+}

@@ -1,0 +1,20 @@
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Vector;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Vector<Integer> numbers = new Vector<>();
+        System.out.println("Enter the number of elements you want to add to the vector:");
+        int n = scanner.nextInt();
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            numbers.add(scanner.nextInt());
+        }
+        Collections.sort(numbers);
+        System.out.println("Sorted Vector: " + numbers);
+        System.out.println("Largest number: " + numbers.lastElement());
+        System.out.println("Smallest number: " + numbers.firstElement());
+        scanner.close();
+    }
+}

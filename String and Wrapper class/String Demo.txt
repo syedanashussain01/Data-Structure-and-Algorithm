@@ -1,0 +1,19 @@
+public class StringDemo {
+    public static void main(String[] args) {
+        String literalString2 = "Hello";
+        String literalString1 = "Hello";
+        String newString1 = new String("World");
+        String newString2 = new String("World");
+        String internedString1 = newString1.intern();
+        String internedString2 = newString2.intern();
+        String immutableString = "Immutable";
+        System.out.println("Before change: " + immutableString);
+        String changedString = immutableString.concat(" Demo");
+        System.out.println("After change (new string): " + changedString);
+        System.out.println("Original string remains: " + immutableString);
+        System.out.println("literalString1 == literalString2: " + (literalString1 == literalString2));
+        System.out.println("newString1 == newString2: " + (newString1 == newString2)); 
+        System.out.println("internedString1 == internedString2: " + (internedString1 == internedString2));
+        System.out.println("literalString1 == internedString1: " + (literalString1 == internedString1));
+    }
+}

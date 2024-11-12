@@ -1,0 +1,18 @@
+import java.util.Arrays;
+public class MergeArray {
+    public static void main(String[] args) {
+        int arr1[]={23,45,67};
+        int arr2[]={98,76,54};
+        int merge[]=new int[arr1.length+arr2.length];
+        int i;
+       for( i=0;i<arr1.length;i++){
+           merge[i]=arr1[i];
+       }
+       for(int j=0;j<arr2.length;j++,i++){
+           merge[i]=arr2[j];
+       }
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+        System.out.println(Arrays.toString(merge));
+    }
+} 

@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class HashCodeExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        int hashCode = input.hashCode();
+        System.out.println("The hash code of the input string is: " + hashCode);
+        scanner.close();
+    }
+}

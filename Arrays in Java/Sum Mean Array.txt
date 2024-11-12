@@ -1,0 +1,15 @@
+import java.util.Arrays;
+public class SumMeanArray {
+    public static void main(String[] args) {
+        double[] arr={2,9.7,6.5,32,8.7,2.9,5};
+        double sum=0;
+        for(double i:arr){
+            sum+=i;
+        }
+        System.out.println("Array of Real Numbers "+Arrays.toString(arr));
+        System.out.println("Sum of Real Numbers are "+sum);
+        int i = 0;
+        double mean=sum/arr[i];
+        System.out.println("Mean of Real Numbers is "+mean);
+    }
+}

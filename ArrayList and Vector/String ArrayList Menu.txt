@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class StringArrayListMenu {
+    public static void main(String[] args) {
+        ArrayList<String> stringList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        stringList.add("Anas");
+        stringList.add("Abdul Wasay");
+        stringList.add("Ibad");
+        stringList.add("Muneeb");
+        int choice;
+        do {
+            System.out.println("\nMenu:");
+            System.out.println("1. Display all elements");
+            System.out.println("2. Display the largest String");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine();  
+            switch (choice) {
+                case 1:
+                    System.out.println("\nElements in the ArrayList:");
+                    for (String str : stringList) {
+                        System.out.println(str);
+                    }
+                    break;
+                case 2:
+                    String largest = findLargestString(stringList);
+                    System.out.println("\nLargest String: " + (largest != null ? largest : "List is empty"));
+                    break;
+                case 3:
+                    System.out.println("Exiting the program.");
+                    break;
+                    
+                default:
+                    System.out.println("Invalid choice! Please try again.");
+            }
+        } while (choice != 3);
+        
+        scanner.close();
+    }
+    public static String findLargestString(ArrayList<String> list) {
+        if (list.isEmpty()) return null;
+        
+        String largest = list.get(0);
+        for (String str : list) {
+            if (str.length() > largest.length()) {
+                largest = str;
+            }
+        }
+        return largest;
+    }
+}

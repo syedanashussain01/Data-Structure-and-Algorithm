@@ -1,0 +1,76 @@
+import java.util.Objects;
+public class Employee1 {
+    private String name;
+    private int id;
+    public Employee1(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getId() {
+        return id;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Employee1 employee = (Employee1) obj;
+        return id == employee.id && Objects.equals(name, employee.name);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, id);
+    }
+    @Override
+    public String toString() {
+        return "Employee{name='" + name + "', id=" + id + "}";
+    }
+}
+
+import java.util.HashSet;
+public class EmployeeManagement {
+    private HashSet<Employee1> employeeRecords;
+    public EmployeeManagement() {
+        employeeRecords = new HashSet<>();
+    }
+    public boolean addEmployee(Employee1 employee) {
+        if (employeeRecords.contains(employee)) {
+            System.out.println("Employee already exists in the records: " + employee);
+            return false;
+        } else {
+            employeeRecords.add(employee);
+            System.out.println("Employee added: " + employee);
+            return true;
+        }
+    }
+    public boolean employeeExists(Employee1 employee) {
+        return employeeRecords.contains(employee);
+    }
+    public void displayEmployees() {
+        if (employeeRecords.isEmpty()) {
+            System.out.println("No employees in the records.");
+        } else {
+            System.out.println("Employees in the records:");
+            for (Employee1 employee : employeeRecords) {
+                System.out.println(employee);
+            }
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        EmployeeManagement management = new EmployeeManagement();
+        Employee1 emp1 = new Employee1("Alice", 101);
+        Employee1 emp2 = new Employee1("Bob", 102);
+        Employee1 emp3 = new Employee1("Alice", 101); 
+        management.addEmployee(emp1); 
+        management.addEmployee(emp2); 
+        management.addEmployee(emp3); 
+        System.out.println("\nChecking if Alice (ID 101) exists: " + management.employeeExists(emp1));
+        System.out.println("\nDisplaying all employees:");
+        management.displayEmployees();
+    }
+}

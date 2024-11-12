@@ -1,0 +1,19 @@
+public class StringOperations {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = "Java";
+        String str4 = "Programming";
+        String str5 = "Language";
+        String concatenatedString = str1 + str2 + str3 + str4 + str5;
+        System.out.println("Concatenated String: " + concatenatedString);
+        String str4Uppercase = str4.toUpperCase();
+        System.out.println("Fourth String in Uppercase: " + str4Uppercase);
+        if (concatenatedString.length() >= 8) {
+            String substringFrom8 = concatenatedString.substring(8);
+            System.out.println("Substring from index 8 onwards: " + substringFrom8);
+        } else {
+            System.out.println("Concatenated string is too short for a substring from index 8.");
+        }
+    }
+}

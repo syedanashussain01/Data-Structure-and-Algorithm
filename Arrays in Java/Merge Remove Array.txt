@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+public class MergeRemoveArray {
+    public static void main(String[] args) {
+        int arr[] = {87, 34, 58, 97};
+        int arr1[] = {43, 76, 13, 91};
+        int[] mergedArray = mergeAndRemoveDuplicates(arr, arr1);
+        System.out.println("Array 1: " + Arrays.toString(arr));
+        System.out.println("Array 2: " + Arrays.toString(arr1));
+        System.out.println("Merged array without duplicates: " + Arrays.toString(mergedArray));
+    }
+    public static int[] mergeAndRemoveDuplicates(int[] arr, int[] arr1) {
+        Set<Integer> resultSet = new HashSet<>();
+        for (int num : arr) {
+            resultSet.add(num);
+        }
+        for (int num : arr1) {
+            resultSet.add(num);
+        }
+        int[] resultArray = new int[resultSet.size()];
+        int i = 0;
+        for (int num : resultSet) {
+            resultArray[i++] = num;
+        }
+        return resultArray;
+    }
+}

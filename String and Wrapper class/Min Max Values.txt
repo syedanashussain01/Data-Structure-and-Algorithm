@@ -1,0 +1,16 @@
+public class MinMaxValues {
+    public static void main(String[] args) {
+        int intMin = Integer.MIN_VALUE;
+        int intMax = Integer.MAX_VALUE;
+        float floatMin = Float.MIN_VALUE;
+        float floatMax = Float.MAX_VALUE;
+        double doubleMin = Double.MIN_VALUE;
+        double doubleMax = Double.MAX_VALUE;
+        System.out.println("Integer Min Value: " + intMin);
+        System.out.println("Integer Max Value: " + intMax);
+        System.out.println("Float Min Value: " + floatMin);
+        System.out.println("Float Max Value: " + floatMax);
+        System.out.println("Double Min Value: " + doubleMin);
+        System.out.println("Double Max Value: " + doubleMax);
+    }
+}

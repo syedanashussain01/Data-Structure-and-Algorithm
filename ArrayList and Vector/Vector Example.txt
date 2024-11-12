@@ -1,0 +1,15 @@
+import java.util.Vector;
+public class VectorExample {
+    public static void main(String[] args) {
+        Vector<Integer> numbers = new Vector<>();
+        for (int i = 1; i <= 10; i++) {
+            numbers.add(i);
+        }
+        System.out.println("The integers in the Vector are: " + numbers);
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        System.out.println("The sum of these integers is: " + sum);
+    }
+}

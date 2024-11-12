@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class ReverseName {
+    public static String reverse(String str) {
+        if (str.isEmpty()) {
+            return str;
+        }
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your full name: ");
+        String fullName = input.nextLine();
+        String reversedName = reverse(fullName);
+        System.out.println("Reversed Name: " + reversedName);
+    }
+}

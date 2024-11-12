@@ -1,0 +1,13 @@
+public class MathOperations {
+    public static void main(String[] args) {
+        Double number = 16.0;
+        Integer exponent = 2;
+        Double negativeNumber = -8.0;
+        Double absValue = Math.abs(negativeNumber);  
+        Double sqrtValue = Math.sqrt(number);       
+        Double powerValue = Math.pow(number, exponent); 
+        System.out.println("Absolute value of " + negativeNumber + " is: " + absValue);
+        System.out.println("Square root of " + number + " is: " + sqrtValue);
+        System.out.println(number + " raised to the power of " + exponent + " is: " + powerValue);
+    }
+}

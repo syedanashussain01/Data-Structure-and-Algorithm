@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class DescendingSequence {
+    public static void printDescending(int k) {
+        if (k < 0) {  
+            return;
+        }
+        System.out.print(k + " ");
+        printDescending(k - 1);  
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer value (k): ");
+        int k = input.nextInt();
+        System.out.println("Sequence from " + k + " to 0:");
+        printDescending(k);
+    }
+}

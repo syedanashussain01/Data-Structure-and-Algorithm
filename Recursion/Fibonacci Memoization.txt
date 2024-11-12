@@ -1,0 +1,23 @@
+import java.util.HashMap;
+import java.util.Scanner;
+public class FibonacciMemoization {
+    private static HashMap<Integer, Long> memo = new HashMap<>();
+    public static long fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        if (memo.containsKey(n)) {
+            return memo.get(n);
+        }
+        long result = fibonacci(n - 1) + fibonacci(n - 2);
+        memo.put(n, result); 
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of N: ");
+        int n = scanner.nextInt();
+        long nthTerm = fibonacci(n);
+        System.out.println("The " + n + "-th term in the Fibonacci series is: " + nthTerm);
+    }
+}
